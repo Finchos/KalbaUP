@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KalbAPP.GameSettingsPage"
+             xmlns:viewmodel="clr-namespace:KalbAPP.ViewModel"
+             xmlns:kalbApp="clr-namespace:KalbAPP"
+             x:DataType="viewmodel:GameSettingsViewModel">
+    
+    <ContentPage.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#FF8C00" Offset="0.0"/>
+            <GradientStop Color="#FFD700" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    
+    <Grid RowDefinitions="Auto, Auto, *, *" Padding="5">
+        <Grid RowDefinitions="*, *" Padding="5">
+            <Grid Grid.Row="0" ColumnDefinitions="*, *">
+                <Label Grid.Column="0" Text="Game: " FontFamily="BananaStick" FontSize="30" Padding="15" TextColor="Black"/>
+                <Button Grid.Column="1"
+                        FontFamily="BananaStick"
+                        ImageSource="dicess.png"
+                        FontSize="24"
+                        Padding="15"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        CornerRadius="35"
+                        WidthRequest="70"
+                        HeightRequest="70"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+            </Grid>
+            <Grid Grid.Row="1" ColumnDefinitions="*,*">
+                <Label Grid.Column="0" Text="Target:" FontFamily="BananaStick" FontSize="30" Padding="15" TextColor="Black"/>
+                <Entry Grid.Column="1" Text="{Binding Target}" Keyboard="Numeric" FontFamily="BananaStick" FontSize="24" TextColor="Black" WidthRequest="100" HeightRequest="50"/>
+            </Grid>
+        </Grid>
+        
+        <VerticalStackLayout Grid.Row="1">
+            <Label Text="Player select: " FontFamily="BananaStick" FontSize="30" Padding="15" TextColor="Black"/>
+            <Frame CornerRadius="10"
+                   HasShadow="True"
+                   BorderColor="#FF4500"
+                   BackgroundColor="Bisque">
+            
+                <ScrollView Orientation="Horizontal" BackgroundColor="Bisque" HorizontalScrollBarVisibility="Never">
+                    <HorizontalStackLayout Spacing="20">
+                        <VerticalStackLayout>
+                            <Button x:Name="DanButton"
+                                    Clicked="OnDanClicked"
+                                    Opacity="0.25"
+                                    ImageSource="dan.png" 
+                                    CornerRadius="50" 
+                                    HeightRequest="100" 
+                                    WidthRequest="100" 
+                                    BackgroundColor="Transparent" 
+                                    Command="{Binding PlayerAddCommand}" 
+                                    CommandParameter="Dan"/>
+                            <Label Text="Dan" FontFamily="SuperCartoon" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout>
+                            <Button x:Name="DominButton"
+                                    Clicked="OnDominClicked"
+                                    Opacity="0.25"
+                                    ImageSource="domin.png" 
+                                    CornerRadius="50" 
+                                    HeightRequest="100" 
+                                    WidthRequest="100" 
+                                    BackgroundColor="Transparent"
+                                    Command="{Binding PlayerAddCommand}" 
+                                    CommandParameter="Domin"/>
+                            <Label Text="Domin" FontFamily="SuperCartoon" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout>
+                            <Button x:Name="SimaButton"
+                                    Clicked="OnSimaClicked"
+                                    Opacity="0.25"
+                                    ImageSource="sima.png" 
+                                    CornerRadius="50" 
+                                    HeightRequest="100" 
+                                    WidthRequest="100" 
+                                    BackgroundColor="Transparent"
+                                    Command="{Binding PlayerAddCommand}" 
+                                    CommandParameter="Sima"/>
+                            <Label Text="Šimon" FontFamily="SuperCartoon" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout>
+                            <Button x:Name="KajaButton"
+                                    Clicked="OnKajaClicked"
+                                    Opacity="0.25"
+                                    ImageSource="kaja.png" 
+                                    CornerRadius="50" 
+                                    HeightRequest="100" 
+                                    WidthRequest="100" 
+                                    BackgroundColor="Transparent"
+                                    Command="{Binding PlayerAddCommand}" 
+                                    CommandParameter="Kaja"/>
+                            <Label Text="Kája" FontFamily="SuperCartoon" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout>
+                            <Button x:Name="FrantaButton"
+                                    Clicked="OnFrantaClicked"
+                                    Opacity="0.25"
+                                    ImageSource="franta.png" 
+                                    CornerRadius="50" 
+                                    HeightRequest="100" 
+                                    WidthRequest="100" 
+                                    BackgroundColor="Transparent"
+                                    Command="{Binding PlayerAddCommand}" 
+                                    CommandParameter="Franta"/>
+                            <Label Text="Franta" FontFamily="SuperCartoon" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout>
+                            <Button x:Name="HelcaButton"
+                                    Clicked="OnHelcaClicked"
+                                    Opacity="0.25"
+                                    ImageSource="helca.png" 
+                                    CornerRadius="50" 
+                                    HeightRequest="100" 
+                                    WidthRequest="100" 
+                                    BackgroundColor="Transparent"
+                                    Command="{Binding PlayerAddCommand}" 
+                                    CommandParameter="Helca"/>
+                            <Label Text="Helča" FontFamily="SuperCartoon" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout>
+                            <Button ImageSource="addguest.png" 
+                                    FontFamily="BananaStick" 
+                                    FontSize="24" 
+                                    CornerRadius="50" 
+                                    HeightRequest="100" 
+                                    WidthRequest="100" 
+                                    BackgroundColor="Transparent"
+                                    Command="{Binding GuestAddCommand}"/>
+                            <Label Text="Add guest" FontFamily="SuperCartoon" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </ScrollView>
+            </Frame>
+        </VerticalStackLayout>
+        
+        <VerticalStackLayout Grid.Row="2">
+            <Label Text="Order: " FontFamily="BananaStick" FontSize="30" Padding="15" TextColor="Black"/>
+            <Frame CornerRadius="10"
+                   HasShadow="True"
+                   BorderColor="#FF4500"
+                   BackgroundColor="Bisque"
+                   HeightRequest="270">
+                <ScrollView Orientation="Vertical" BackgroundColor="Bisque" VerticalScrollBarVisibility="Never">
+                    <CollectionView ItemsSource="{Binding Players}"
+                                    CanReorderItems="True">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="{x:Type kalbApp:Player}">  <!-- ✅ ADD THIS -->
+                                <Frame Padding="10" BorderColor="Gray" Margin="5" BackgroundColor="White">
+                                    <HorizontalStackLayout Spacing="30">
+                                        <Image Source="{Binding ProfilePicture}"  
+                                               WidthRequest="50" HeightRequest="50"/>
+                                        <Label Text="{Binding Name}" FontSize="20" FontFamily="SuperCartoon" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                    </HorizontalStackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </ScrollView>
+            </Frame>
+        </VerticalStackLayout>
+        
+        <VerticalStackLayout Grid.Row="3" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,40">
+            <Button Text="Start Game"
+                    FontFamily="BananaStick"
+                    FontSize="24"
+                    Padding="15"
+                    BackgroundColor="#FF4500"
+                    TextColor="White"
+                    CornerRadius="30"
+                    WidthRequest="200"
+                    Command="{Binding StartGameCommand}"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

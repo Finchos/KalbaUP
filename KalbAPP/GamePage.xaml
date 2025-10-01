@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KalbAPP.GamePage"
+             xmlns:viewmodel="clr-namespace:KalbAPP.ViewModel"
+             xmlns:kalbApp="clr-namespace:KalbAPP"
+             x:DataType="viewmodel:GameViewModel">
+    
+    <ContentPage.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#FF8C00" Offset="0.0"/>
+            <GradientStop Color="#FFD700" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    
+    <Grid RowDefinitions="Auto, *, Auto">
+        <HorizontalStackLayout Grid.Row="0" HorizontalOptions="Center" Spacing="20">
+            <Label Text="Target: " FontFamily="BananaStick" FontSize="30" Padding="15" TextColor="Black"/>
+            <Label Text="{Binding Target}" FontFamily="BananaStick" FontSize="30" Padding="15" TextColor="#FF4500"/>
+        </HorizontalStackLayout>
+        
+        <ScrollView Grid.Row="1" Orientation="Vertical" VerticalScrollBarVisibility="Never">
+            <CollectionView ItemsSource="{Binding Players}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="kalbApp:Player">
+                        <Frame CornerRadius="0" BackgroundColor="Transparent" BorderColor="Black">
+                            <Grid ColumnDefinitions="*,*,*">
+                                <Image Source="{Binding ProfilePicture}" HeightRequest="50" WidthRequest="50" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                <Label Grid.Column="1" Text="{Binding Name}" FontSize="20" FontFamily="SuperCartoon" VerticalOptions="Center" TextColor="Black"/>
+                                <Label Grid.Column="2" Text="{Binding Score}" FontSize="40" FontFamily="SuperCartoon" TextColor="#FF4500" VerticalOptions="Center" HorizontalOptions="End"/>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+        
+        <Frame Grid.Row="2" VerticalOptions="End" BackgroundColor="White">
+            <Grid ColumnDefinitions="Auto, *, Auto">
+                <VerticalStackLayout HorizontalOptions="Start">
+                    <Image Source="{Binding CurrentPlayer.ProfilePicture}" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center"/>
+                    <Label Text="{Binding CurrentPlayer.Name}" FontFamily="SuperCartoon" FontSize="20" HorizontalOptions="Center" HorizontalTextAlignment="Center" TextColor="Black"/>
+                </VerticalStackLayout>
+                <Entry Grid.Column="1" Text="{Binding Score, Mode=TwoWay}" FontFamily="BananaStick" FontSize="50" Keyboard="Numeric" VerticalTextAlignment="End" HorizontalOptions="Center" VerticalOptions="End" HorizontalTextAlignment="Center" WidthRequest="150" TextColor="Black"/>
+                <Button Grid.Column="2"
+                        Text="Finish"
+                        FontFamily="BananaStick"
+                        FontSize="24"
+                        Padding="15"
+                        BackgroundColor="#FF4500"
+                        TextColor="White"
+                        CornerRadius="30"
+                        WidthRequest="100"
+                        HorizontalOptions="End"
+                        Command="{Binding FinishedTurnCommand}"/>
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>

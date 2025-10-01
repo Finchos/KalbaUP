@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - --entitlements /Users/simon/RiderProjects/KalbAPP/KalbAPP/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/Entitlements.xcent /Users/simon/RiderProjects/KalbAPP/KalbAPP/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/KalbAPP.app

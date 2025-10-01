@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KalbAPP</name>
+    </assembly>
+    <members>
+        <member name="T:KalbAPP.Player">
+            <inheritdoc/>
+        </member>
+        <member name="P:KalbAPP.Player.Name">
+            <inheritdoc cref="F:KalbAPP.Player.name"/>
+        </member>
+        <member name="P:KalbAPP.Player.ProfilePicture">
+            <inheritdoc cref="F:KalbAPP.Player.profilePicture"/>
+        </member>
+        <member name="P:KalbAPP.Player.Score">
+            <inheritdoc cref="F:KalbAPP.Player.score"/>
+        </member>
+        <member name="T:KalbAPP.ViewModel.GameSettingsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:KalbAPP.ViewModel.GameSettingsViewModel.Players">
+            <inheritdoc cref="F:KalbAPP.ViewModel.GameSettingsViewModel.players"/>
+        </member>
+        <member name="P:KalbAPP.ViewModel.GameSettingsViewModel.Target">
+            <inheritdoc cref="F:KalbAPP.ViewModel.GameSettingsViewModel.target"/>
+        </member>
+        <member name="P:KalbAPP.ViewModel.GameSettingsViewModel.DanState">
+            <inheritdoc cref="F:KalbAPP.ViewModel.GameSettingsViewModel.danState"/>
+        </member>
+        <member name="P:KalbAPP.ViewModel.GameSettingsViewModel.DominState">
+            <inheritdoc cref="F:KalbAPP.ViewModel.GameSettingsViewModel.dominState"/>
+        </member>
+        <member name="P:KalbAPP.ViewModel.GameSettingsViewModel.SimaState">
+            <inheritdoc cref="F:KalbAPP.ViewModel.GameSettingsViewModel.simaState"/>
+        </member>
+        <member name="P:KalbAPP.ViewModel.GameSettingsViewModel.KajaState">
+            <inheritdoc cref="F:KalbAPP.ViewModel.GameSettingsViewModel.kajaState"/>
+        </member>
+        <member name="P:KalbAPP.ViewModel.GameSettingsViewModel.FrantaState">
+            <inheritdoc cref="F:KalbAPP.ViewModel.GameSettingsViewModel.frantaState"/>
+        </member>
+        <member name="P:KalbAPP.ViewModel.GameSettingsViewModel.HelcaState">
+            <inheritdoc cref="F:KalbAPP.ViewModel.GameSettingsViewModel.helcaState"/>
+        </member>
+        <member name="F:KalbAPP.ViewModel.GameSettingsViewModel.playerAddCommand">
+            <summary>The backing field for <see cref="P:KalbAPP.ViewModel.GameSettingsViewModel.PlayerAddCommand"/>.</summary>
+        </member>
+        <member name="P:KalbAPP.ViewModel.GameSettingsViewModel.PlayerAddCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:KalbAPP.ViewModel.GameSettingsViewModel.PlayerAdd(System.String)"/>.</summary>
+        </member>
+        <member name="F:KalbAPP.ViewModel.GameSettingsViewModel.guestAddCommand">
+            <summary>The backing field for <see cref="P:KalbAPP.ViewModel.GameSettingsViewModel.GuestAddCommand"/>.</summary>
+        </member>
+        <member name="P:KalbAPP.ViewModel.GameSettingsViewModel.GuestAddCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:KalbAPP.ViewModel.GameSettingsViewModel.GuestAdd"/>.</summary>
+        </member>
+        <member name="F:KalbAPP.ViewModel.GameSettingsViewModel.startGameCommand">
+            <summary>The backing field for <see cref="P:KalbAPP.ViewModel.GameSettingsViewModel.StartGameCommand"/>.</summary>
+        </member>
+        <member name="P:KalbAPP.ViewModel.GameSettingsViewModel.StartGameCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:KalbAPP.ViewModel.GameSettingsViewModel.StartGame"/>.</summary>
+        </member>
+        <member name="T:KalbAPP.ViewModel.GameViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:KalbAPP.ViewModel.GameViewModel.Target">
+            <inheritdoc cref="F:KalbAPP.ViewModel.GameViewModel.target"/>
+        </member>
+        <member name="P:KalbAPP.ViewModel.GameViewModel.Players">
+            <inheritdoc cref="F:KalbAPP.ViewModel.GameViewModel.players"/>
+        </member>
+        <member name="P:KalbAPP.ViewModel.GameViewModel.CurrentPlayer">
+            <inheritdoc cref="F:KalbAPP.ViewModel.GameViewModel.currentPlayer"/>
+        </member>
+        <member name="P:KalbAPP.ViewModel.GameViewModel.Score">
+            <inheritdoc cref="F:KalbAPP.ViewModel.GameViewModel.score"/>
+        </member>
+        <member name="F:KalbAPP.ViewModel.GameViewModel.finishedTurnCommand">
+            <summary>The backing field for <see cref="P:KalbAPP.ViewModel.GameViewModel.FinishedTurnCommand"/>.</summary>
+        </member>
+        <member name="P:KalbAPP.ViewModel.GameViewModel.FinishedTurnCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:KalbAPP.ViewModel.GameViewModel.FinishedTurn"/>.</summary>
+        </member>
+        <member name="T:KalbAPP.ViewModel.MainViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="F:KalbAPP.ViewModel.MainViewModel.startApplicationCommand">
+            <summary>The backing field for <see cref="P:KalbAPP.ViewModel.MainViewModel.StartApplicationCommand"/>.</summary>
+        </member>
+        <member name="P:KalbAPP.ViewModel.MainViewModel.StartApplicationCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:KalbAPP.ViewModel.MainViewModel.StartApplication"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProfilePicture">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProfilePicture" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Score">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Score" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Players">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Players" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Target">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Target" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DanState">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DanState" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DominState">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DominState" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SimaState">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SimaState" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.KajaState">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "KajaState" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FrantaState">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FrantaState" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.HelcaState">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "HelcaState" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentPlayer">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentPlayer" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProfilePicture">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProfilePicture" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Score">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Score" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Players">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Players" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Target">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Target" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DanState">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DanState" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DominState">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DominState" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SimaState">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SimaState" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.KajaState">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "KajaState" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FrantaState">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FrantaState" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.HelcaState">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "HelcaState" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentPlayer">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentPlayer" generated properties.</summary>
+        </member>
+    </members>
+</doc>
