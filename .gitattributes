@@ -1,0 +1,12 @@
+# Vynutit, že .cs je C#
+*.cs linguist-language=C#
+
+# Vynutit, že .xaml je XAML
+*.xaml linguist-language=XAML
+
+# Vše ostatní ignorovat, ať se nepočítá
+*.* linguist-vendored
+
+# Ale .cs a .xaml neignorovat (přebije předchozí pravidlo)
+*.cs -linguist-vendored
+*.xaml -linguist-vendored
